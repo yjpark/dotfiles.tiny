@@ -119,7 +119,7 @@ fresh-begin() {
 fresh-end() {
     _verbose "find ${TMP}/_fresh/_build -mindepth 1 -maxdepth 1 | xargs -n 1 -I NAME cp -R NAME ~/"
     _error ""
-    find ${TMP}/_fresh/_build -mindepth 1 -maxdepth 1 | xargs -n 1 -I NAME cp -R NAME ~/
+    find ${TMP}/_fresh/_build -mindepth 1 -maxdepth 1 | xargs -n 1 -I NAME cp -Rv NAME ~/
 
     echo $'Your dot files are now \033[1;32mfresh\033[0m.'
 }
